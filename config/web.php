@@ -4,14 +4,16 @@ return [
     'id' => 'school-web2',
     'basePath' => realpath(__DIR__ . '/../'),
     'bootstrap' => ['debug'],
-    'language' => 'ru',
     'aliases' => [
         '@bower' => '@vendor/yidas/yii2-bower-asset/bower',
     ],
     'components' => [
         'urlManager' => [
             'enablePrettyUrl' => true,
-            'showScriptName' => false
+            'showScriptName' => false,
+            'class' => 'codemix\localeurls\UrlManager',
+            'languages' => ['ru', 'en'],
+            'enableDefaultLanguageUrlCode' => true
         ],
         'request' => [
             'cookieValidationKey' => 'super secret code'
