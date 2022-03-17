@@ -1,6 +1,19 @@
+<?php $this->beginPage(); ?>
+<!DOCTYPE html>
 <html>
-    <body>
-        <h1>Video School</h1>
+
+<head>
+    <title>VideoSchool</title>
+    <?php $this->head(); ?>
+</head>
+
+<body>
+    <?php $this->beginBody(); ?>
+    <h1>Video School</h1>
+    <div class="container" style="margin-top: 80px;">
         <?= $content ?>
-    </body>
-</html>
+    </div>
+    <?php $this->endBody(); ?>
+
+</body>
+<?php $this->endPage(); ?>
